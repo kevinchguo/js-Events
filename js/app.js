@@ -6,6 +6,12 @@
 The function will add the following content inside the paragraph with the id of `nirvana`.
 */
 
+function moreTrees() {
+    var addLyrics = document.getElementById('nirvana');
+    addLyrics.innerHTML = bliss;
+    addLyrics.style.color = 'cornflowerblue';
+}
+
 var bliss = "Let's put some happy little bushes on the other side now. Anything you want to do you can do here. Trees cover up a multitude of sins. If you don't like it - change it. It's your world. Maybe there's a happy little waterfall happening over here."
 
 
@@ -14,7 +20,11 @@ var bliss = "Let's put some happy little bushes on the other side now. Anything 
 
 The function will hide the contents in the pargraph with the id of `less`.*/
 
-
+function lessContent() {
+    var displayLess = document.getElementById('less');
+    displayLess.style.display = 'none';
+    displayLess.style.color = 'cornflowerblue';
+}
 
 //3. Edward (エドワード)
 /*Create a function named `bling` that will change the text in the paragraph of `worm` after hovering over it. Use the style guide below.
