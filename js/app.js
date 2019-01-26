@@ -23,7 +23,7 @@ The function will hide the contents in the pargraph with the id of `less`.*/
 function lessContent() {
     var displayLess = document.getElementById('less');
     displayLess.style.display = 'none';
-    displayLess.style.color = 'cornflowerblue';
+    // displayLess.style.color = 'cornflowerblue';
 }
 
 //3. Edward (エドワード)
@@ -36,7 +36,13 @@ border: 3px dotted rosybrown
 padding: 10px
 */
 
-
+function bling() {
+    var flashy = document.getElementById('worm');
+    flashy.style.fontSize = '28px';
+    flashy.style.color = '#33cc33';
+    flashy.style.border = '3px dotted rosybrown';
+    flashy.style.padding = '10px';
+}
 
 //4. Beet Cakes by Dre
 /*Add an event listener to the `recipe` button that will display the missing ingredient in the paragraph of `ingredient` after clicking on the button*/
