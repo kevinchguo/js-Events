@@ -49,7 +49,7 @@ function bling() {
 
 var missing = "1 Big ol' beet";
 
-recipe.addEventListener('click', displayIngredient)
+recipe.addEventListener('click', displayIngredient);
 
 function displayIngredient() {
     var addIngredient = document.createElement('li');
@@ -65,12 +65,27 @@ function displayIngredient() {
 // Use this for the new image:
 // 'https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif'
 
+puggy.addEventListener('mousemove', pugLife);
 
+function pugLife() {
+    var richPug = document.getElementsByTagName('img');
+    // console.log(richPug)
+    richPug[4].src = 'https://media.giphy.com/media/12pJ8OxSWwO86Y/giphy.gif';
+}
 
 //6. DevLeague Lunch Wagon
 /*Add an event listener to the `menu` div element that will display and hide the dessert item after clicking on 'Today's Special'*/
 
+menu.addEventListener('click', hideDesert);
 
+function hideDesert() {
+    var hideMenu = document.getElementById('dessert');
+    if(hideMenu.style.display === 'none' ){
+        hideMenu.style.display = 'block'
+    }else{
+        hideMenu.style.display = 'none'
+    }
+}
 
 //7. The Purple Monster
 /*Add an event listener to the `bio` paragraph element that will display Grimace's name, sign and hobbies after clicking on the paragraph element. Hint, you'll need to create new elements for each object property. Apppend these new elements into the `bio` paragraph element.*/
