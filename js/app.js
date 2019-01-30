@@ -98,6 +98,27 @@ var grimace = {
     hobbies: ['knitting', 'scrapbooking', 'mixed martial arts']
 };
 
+bio.addEventListener('click', displayProfile);
+
+function displayProfile() {
+    var divName = document.createElement('div');
+    var divAge = document.createElement('div');
+    var divSign = document.createElement('div')
+    var divBloodtype = document.createElement('div')
+    var divHobbies = document.createElement('div')
+
+    divName.innerHTML = grimace.name;
+    divAge.innerHTML = grimace.age;
+    divSign.innerHTML = grimace.sign;
+    divBloodtype.innerHTML = grimace.bloodtype;
+    divHobbies.innerHTML = grimace.hobbies;
+
+    bio.appendChild(divName);
+    bio.appendChild(divAge);
+    bio.appendChild(divSign);
+    bio.appendChild(divBloodtype);
+    bio.appendChild(divHobbies);
+}
 
 //8. Fortune Cookie
 /*Add an event listener to the `fortune` button that will generate a random message in the `showFortune` h3 element after clicking on the button*/
@@ -105,6 +126,22 @@ var grimace = {
 var messages = ["That wasn't chicken.", "The fortune you seek is in another cookie.", "Tell your friends about DevLeague Prep.", "You will be doing many events tonight.", "Don't let statistics do a number on you.", "Buy your instructor a drink and receive double fortune.", "Is a turtle without a shell naked or homeless?"];
 
 
+fortune.addEventListener('click', makeFortune);
+
+function makeFortune() {
+    var fortune = document.getElementById('showFortune');
+    fortune.innerHTML = messages[Math.floor(Math.random()*messages.length)];
+
+
+}
+
 //9. Open Sesame
 /*Add an event listener to the `secret` input element that will capitalize letter inputs in the form. Hint, you'll be using the keyup event*/
 
+secret.addEventListener('keyup', password);
+
+function password() {
+    var getPW = document.getElementById('secret');
+    getPW.style.textTransform = 'uppercase'
+
+}
